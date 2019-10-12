@@ -1,0 +1,13 @@
+[Unit]
+Description=YouTube archival service
+Wants=archive-youtube.timer
+
+[Service]
+User=matt
+Group=matt
+WorkingDirectory=/media/array/files/youtube
+ExecStart=/bin/bash /home/matt/source/automation/archive-youtube/execute.sh
+Slice=automation.slice
+
+[Install]
+WantedBy=multi-user.target

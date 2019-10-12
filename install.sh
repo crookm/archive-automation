@@ -7,3 +7,4 @@ sudo loginctl enable-linger $USER
 sudo systemctl link $DIR/automation.slice
 
 /bin/bash archive-instagram/install.sh
+/bin/bash archive-youtube/install.sh
