@@ -1,0 +1,13 @@
+[Unit]
+Description=Start instagram archival automations
+Wants=archive-instagram.timer
+
+[Service]
+User=matt
+Group=matt
+WorkingDirectory=/home/matt/archive/instagram
+ExecStart=/bin/bash /home/matt/source/automation/archive-instagram/execute.sh
+Slice=automation.slice
+
+[Install]
+WantedBy=multi-user.target

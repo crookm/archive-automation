@@ -1,0 +1,8 @@
+[Unit]
+Description=Automation slice
+DefaultDependencies=no
+Before=slices.target
+
+[Slice]
+CPUQuota=20%
+MemoryLimit=1G
