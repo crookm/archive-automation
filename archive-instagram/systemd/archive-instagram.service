@@ -1,5 +1,5 @@
 [Unit]
-Description=Start instagram archival automations
+Description=Instagram archival service
 Wants=archive-instagram.timer
 
 [Service]
