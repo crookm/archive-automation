@@ -1,4 +1,4 @@
-DIR=dirname $(readlink -f "$0")
+DIR=$(dirname $(readlink -f "$0"))
 
 mkdir -p "$HOME/.automation"
 

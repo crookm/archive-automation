@@ -1,4 +1,4 @@
-DIR=dirname $(readlink -f "$0")
+DIR=$(dirname $(readlink -f "$0"))
 
 pip3 install instaloader
 
