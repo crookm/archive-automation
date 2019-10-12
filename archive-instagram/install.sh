@@ -6,6 +6,6 @@ read -p "Your instagram username: " IG_USER
 instaloader --login=$IG_USER --sessionfile="$HOME/.automation/archive-instagram.session"
 
 sudo systemctl link $DIR/systemd/archive-instagram.service
-sudo systemctl link $DIR/systemd/archive-instagram.timer
 
-sudo systemctl enable archive-instagram.service
+sudo systemctl enable $DIR/systemd/archive-instagram.timer
+sudo systemctl start archive-instagram
