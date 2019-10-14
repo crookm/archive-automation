@@ -12,4 +12,4 @@ if [ ! -r $PLAYLIST_DIR ]; then
   exit 1
 fi
 
-youtube-dl --add-metadata --no-overwrites --restrict-filenames --output "%(playlist)s/%(playlist_index)s-%(title)s-%(id)s.%(ext)s" --ignore-errors --quiet --batch-file $PLAYLIST_DIR
+youtube-dl --add-metadata --no-overwrites --restrict-filenames --output "%(playlist)s/%(playlist_index)s-%(title)s-%(id)s.%(ext)s" --ignore-errors --no-warnings --quiet --batch-file $PLAYLIST_DIR
