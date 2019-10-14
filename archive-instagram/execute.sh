@@ -23,6 +23,9 @@ if [ -r $SESSION_DIR ]; then
   fi
   
   SESSION_ARGS="--login=$(head -n 1 $USERNAME_DIR) --sessionfile=$SESSION_DIR"
+
+  # download bookmarked posts
+  instaloader $SESSION_ARGS --quiet --fast-update --no-caption --no-metadata-json --no-compress-json --no-video-thumbnails --dirname-pattern=__bookmarked --filename-pattern={date_utc:%Y}/{date_utc}_UTC-{shortcode} ":saved"
 fi
 
 # download posts
