@@ -16,9 +16,6 @@ if [ ! -r $PROFILES_DIR ]; then
   exit 1
 fi
 
-# download posts
-instaloader $SESSION_ARGS --quiet --fast-update --no-captions --no-metadata-json --no-compress-json --no-video-thumbnails --dirname-pattern={profile} --filename-pattern={date_utc:%Y}/{date_utc}_UTC-{shortcode} +$PROFILES_DIR
-
 if [ -r $SESSION_DIR ]; then
   if [ ! -r $USERNAME_DIR ]; then
     echo >&2 "Could not access the username file: $USERNAME_DIR. This is required when specifying a session. Aborting."
@@ -36,3 +33,6 @@ if [ -r $SESSION_DIR ]; then
   # download highlights
   instaloader $SESSION_ARGS --quiet --fast-update --no-captions --no-metadata-json --no-compress-json --no-video-thumbnails --no-profile-pic --highlights --no-posts --dirname-pattern={profile}/highlights --filename-pattern={date_utc:%Y}/{date_utc}_UTC-{shortcode} +$PROFILES_DIR
 fi
+
+# download posts
+instaloader $SESSION_ARGS --quiet --fast-update --no-captions --no-metadata-json --no-compress-json --no-video-thumbnails --dirname-pattern={profile} --filename-pattern={date_utc:%Y}/{date_utc}_UTC-{shortcode} +$PROFILES_DIR
