@@ -1,11 +1,11 @@
 [Unit]
-Description=Run archive-instagram every six hours
+Description=Run archive-instagram every three hours
 Requires=archive-instagram.service
 
 [Timer]
 Unit=archive-instagram.service
-OnUnitInactiveSec=6h
-RandomizedDelaySec=30m
+OnUnitInactiveSec=3h
+RandomizedDelaySec=1h
 AccuracySec=1s
 
 [Install]

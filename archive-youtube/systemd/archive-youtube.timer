@@ -1,11 +1,11 @@
 [Unit]
-Description=Run archive-youtube every two days
+Description=Run archive-youtube every twelve hours
 Requires=archive-youtube.service
 
 [Timer]
 Unit=archive-youtube.service
-OnUnitInactiveSec=2d
-RandomizedDelaySec=6h
+OnUnitInactiveSec=12h
+RandomizedDelaySec=3h
 AccuracySec=1s
 
 [Install]
