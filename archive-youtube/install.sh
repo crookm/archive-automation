@@ -1,6 +1,6 @@
 DIR=$(dirname $(readlink -f "$0"))
 
-sudo pip install --upgrade youtube-dl
+sudo pip3 install --upgrade youtube-dl
 
 sudo systemctl link $DIR/systemd/archive-youtube.service
 
