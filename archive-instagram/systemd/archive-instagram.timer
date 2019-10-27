@@ -4,7 +4,7 @@ Requires=archive-instagram.service
 
 [Timer]
 Unit=archive-instagram.service
-OnUnitInactiveSec=3h
+OnUnitInactiveSec=6h
 RandomizedDelaySec=1h
 AccuracySec=1s
 
